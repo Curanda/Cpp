@@ -1,0 +1,43 @@
+#define _use_math_defines
+#include <iostream>
+#include <string>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+    string dzien1, miesiac1, rok1, dzien2, miesiac2, rok2;
+
+    cout << "Enter the day of the first date : \n";
+    cin >> dzien1;
+    cout << "Enter the month of the first date : \n";
+    cin >> miesiac1;
+    cout << "Enter the year of the first date : \n";
+    cin >> rok1;
+
+    cout << "Enter the day of the second date : \n";
+    cin >> dzien2;
+    cout << "Enter the month of the second date : \n";
+    cin >> miesiac2;
+    cout << "Enter the year of the second date : \n";
+    cin >> rok2;
+
+    int dzien10 = stoi(dzien1);
+    int dzien20 = stoi(dzien2);
+    int miesiac10 = stoi(miesiac1);
+    int miesiac20 = stoi(miesiac2);
+    int rok10 = stoi(rok1);
+    int rok20 = stoi(rok2);
+
+    if ((30 < dzien10 > 0) && (12 < miesiac10 > 0) && (30 < dzien20 > 0) && (12 < miesiac20 > 0))
+    {
+        if (rok10 + miesiac10 + dzien10 < rok20 + miesiac20 + dzien20) {
+            cout << "First date is earlier than the second.";
+        } else {
+            cout << "Second date is earlier than the first.";
+        };
+    } else {
+        cout << "Invalid date entered. Please excecute the program again and provide a realistic date.";
+    };
+}
